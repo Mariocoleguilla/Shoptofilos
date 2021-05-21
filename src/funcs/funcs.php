@@ -212,6 +212,7 @@ function inserts()
 function sale($id_ejemplar, $dni)
 {
     $conn = connection();
+    $warnings = "";
 
     $sql = "UPDATE ejemplares SET estado='vendido' WHERE id_ejemplar = " . $id_ejemplar . "";
                 
@@ -279,6 +280,7 @@ function rental($id_ejemplar, $dni)
 function login($user, $password, $dni) {
 
         $conn = connection();
+        $warnings = "";
 
         if (strlen($user) < 1 || strlen($password) < 1 || strlen($dni) < 1) {
             $warnings = "<p class=\"advice warning\">Rellena todos los campos</p>";
@@ -314,6 +316,7 @@ function login($user, $password, $dni) {
 function registry($name, $surname1, $surname2, $dni, $phone, $user, $password, $password2) {
     
         $conn = connection();
+        $warnings = "";
     
         $name_surnameRegExp = "/^[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+( [A-ZÁÉÍÓÚÑ][a-záéíóúñ]+)*$/";
         $dniRegExp = "/^[0-9]{8}[A-Z]{1}$/i";
@@ -382,6 +385,7 @@ function registry($name, $surname1, $surname2, $dni, $phone, $user, $password, $
 function passwordChange($dni, $oldPassword, $newPassword, $verifyNewPassword) {
     
     $conn = connection();
+    $warnings = "";
     $passwordRegExp = "/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/";
 
     if (strlen($oldPassword) < 1 ||
