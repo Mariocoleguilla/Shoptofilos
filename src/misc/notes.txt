@@ -1,0 +1,3 @@
+Colorear el marco de los input de rojo en los que no se puedan modificar (readonly)
+Hacer validaciones de forumarios (fechas, dni, nombres...)
+No permitir a los input type=numer bajar de 0

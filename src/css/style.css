@@ -1,0 +1,753 @@
+/*NORMALIZE*********************************************/
+
+html {
+    line-height: 1.15;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section {
+    display: block;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+    color: white;
+}
+
+figcaption,
+figure,
+main {
+    display: block;
+}
+
+figure {
+    margin: 1em 40px;
+}
+
+hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+}
+
+pre {
+    font-family: monospace, monospace;
+    font-size: 1em;
+}
+
+a {
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+
+abbr[title] {
+    border-bottom: none;
+    text-decoration: underline;
+    text-decoration: underline dotted;
+}
+
+b,
+strong {
+    font-weight: inherit;
+}
+
+b,
+strong {
+    font-weight: bolder;
+}
+
+code,
+kbd,
+samp {
+    font-family: monospace, monospace;
+    font-size: 1em;
+}
+
+dfn {
+    font-style: italic;
+}
+
+mark {
+    background-color: #ff0;
+    color: #000;
+}
+
+small {
+    font-size: 80%;
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+sup {
+    top: -0.5em;
+}
+
+audio,
+video {
+    display: inline-block;
+}
+
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+img {
+    border-style: none;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: sans-serif;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+
+button,
+input {
+    overflow: visible;
+}
+
+button,
+select {
+    text-transform: none;
+}
+
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+    outline: 1px dotted ButtonText;
+}
+
+fieldset {
+    padding: 0.35em 0.75em 0.625em;
+}
+
+legend {
+    box-sizing: border-box;
+    color: inherit;
+    display: table;
+    max-width: 100%;
+    padding: 0;
+    white-space: normal;
+}
+
+progress {
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+textarea {
+    overflow: auto;
+}
+
+[type="checkbox"],
+[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+
+[type="search"] {
+    -webkit-appearance: textfield;
+    outline-offset: -2px;
+}
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    font: inherit;
+}
+
+details,
+menu {
+    display: block;
+}
+
+summary {
+    display: list-item;
+}
+
+canvas {
+    display: inline-block;
+}
+
+template {
+    display: none;
+}
+
+[hidden] {
+    display: none;
+}
+
+
+/*********************************************NORMALIZE*/
+
+
+/*FONTS*********************************************/
+
+@font-face {
+    font-family: Montserrat;
+    src: url('../fonts/Montserrat/Montserrat-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Raleway;
+    src: url('../fonts/Raleway/Raleway-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Titillium Web;
+    src: url('../fonts/Titillium_Web/TitilliumWeb-Regular.ttf') format('truetype');
+}
+
+
+/*********************************************FONTS*/
+
+
+/*SHARED*********************************************/
+
+* {
+    box-sizing: border-box;
+}
+
+header,
+footer {
+    width: 100%;
+    background-color: rgba(90, 90, 90, 0.7);
+}
+
+
+/*********************************************SHARED*/
+
+
+/*MENU BUTTON*********************************************/
+
+.menuButton {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    height: 2.3em;
+    transition-duration: .3s;
+}
+
+.menuButtonContainer:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+.menuButtonContainer:hover .menuButton {
+    color: rgb(43, 43, 187);
+    height: 4em;
+}
+
+.menuButtonContainer {
+    display: inline-block;
+    text-align: center;
+    background-color: rgb(43, 43, 187);
+    font-size: 18px;
+    font-family: Montserrat;
+    position: absolute;
+    bottom: 0;
+}
+
+.menuButtonContainer:nth-of-type(1) {
+    /*Aplicado al primer botón*/
+    left: 25px;
+}
+
+.menuButtonContainer:nth-of-type(2) {
+    /*Aplicado al segundo botón*/
+    left: 140px;
+}
+
+
+/*********************************************MENU BUTTON*/
+
+header {
+    border-bottom: 5px solid rgba(255, 0, 0, 0.8);
+    position: relative;
+}
+
+fieldset input {
+    width: 240px;
+}
+
+.right {
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: right;
+    margin: 0 20px 25px 0;
+}
+
+.right label {
+    padding: 7px;
+    background-color: white;
+}
+
+fieldset {
+    width: 1%;
+    /*Si se pone un porcentaje más bajo que lo que ocupa el contenido, se ajustará al contenido*/
+    margin: 0 auto 200px auto;
+    padding: 15px;
+    background-color: rgba(43, 43, 187, 0.8);
+    color: white;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 0, 0, 0.8);
+}
+
+legend {
+    background-color: rgba(43, 43, 187, 0.8);
+    padding: 5px;
+    border-radius: 7px;
+    border: 1px solid rgba(255, 0, 0, 0.8);
+    font-family: Raleway;
+}
+
+.fieldsetParagraph {
+    font-family: Raleway;
+    font-size: 14px;
+}
+
+.fieldsetParagraph a {
+    color: white;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    margin: 0 0 200px 0;
+    height: 171px;
+}
+
+h1 {
+    text-align: center;
+    color: black;
+    padding: 20px 0;
+    margin: 0;
+}
+
+.mainTitle {
+    font-family: Montserrat;
+    font-size: 60px;
+}
+
+.company {
+    display: block;
+    font-size: 17px;
+}
+
+.pageTitleContainer {
+    margin: 30px auto;
+    text-align: center;
+    font-family: Montserrat;
+}
+
+.pageTitle {
+    padding: 10px;
+    background-color: black;
+    color: white;
+    display: inline;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    font-family: Raleway;
+    font-size: 20px;
+    text-align: center;
+}
+
+td {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+tr td:nth-of-type(2n+0) {
+    background-color: rgb(255, 255, 255);
+}
+
+tr td:nth-of-type(2n+1) {
+    background-color: rgba(110, 110, 110, 0.2);
+}
+
+form {
+    margin: 0;
+}
+
+.fullWidthButton button {
+    width: 100%;
+}
+
+button {
+    /*Para que los botones de algunos formularios no estén tan pegados a las tablas un margin-bottom de 20px*/
+    margin-bottom: 20px;
+    font-family: Raleway;
+    background-color: grey;
+    color: white;
+    border: 0px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+.gamesQueryButtons {
+    width: 100%;
+    margin: 0;
+    height: 40px;
+}
+
+.gamesQueryCells {
+    padding: 0;
+}
+
+td {
+    padding: 10px 0;
+}
+
+input {
+    border: 0.5px solid black;
+    height: 40px;
+    padding: 0 10px;
+    font-family: Titillium Web;
+}
+
+.redInput, .redInput:focus {
+    background-color: rgb(255, 120, 120);
+}
+
+label {
+    font-family: Montserrat;
+}
+
+input:focus {
+    background-color: rgba(0, 255, 51, 0.6);
+    transition-duration: .8s;
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    padding: 20px;
+    margin: 0 0 210px 0;
+}
+
+.container a {
+    display: inline-block;
+    background-color: rgba(43, 43, 187, 0.8);
+    width: 250px;
+    height: 250px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    transition-duration: .3s;
+}
+
+.container a:hover {
+    width: 350px;
+    height: 350px;
+    padding-top: 135px;
+    font-size: 20px;
+}
+
+.container input {
+    width: 250px;
+}
+
+.container .passwordInput {
+    width: 530px;
+}
+
+.advice {
+    font-family: Raleway;
+    text-align: center;
+    background-color: black;
+    padding: 10px;
+    margin: 0;
+}
+
+.warning {
+    color: rgb(255, 0, 0);
+}
+
+.notice {
+    color: rgb(0, 255, 0);
+}
+
+.neutral {
+    color: rgb(255, 255, 0);
+}
+
+
+/*CONTAINER-LINKS*********************************************/
+
+.container-links {
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    padding: 20px;
+    margin: 0 0 50px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.container-links a {
+    width: 260px;
+    height: 260px;
+    text-decoration: none;
+    padding-top: 90px;
+    color: rgb(255, 255, 255);
+    font-family: Titillium Web;
+    transition-duration: .3s;
+    border: 1px solid black;
+}
+
+.container-links a:hover {
+    width: 360px;
+    height: 360px;
+    padding-top: 135px;
+    font-size: 20px;
+}
+
+
+/*********************************************CONTAINER-LINKS*/
+
+.container-user a {
+    background-color: rgba(43, 43, 187, 0.8);
+}
+
+.container-user a:hover {
+    background-color: rgb(0, 0, 255);
+    color: black;
+}
+
+.container-edit a {
+    background-color: rgba(187, 43, 43, 0.8);
+}
+
+.container-edit a:hover {
+    background-color: rgb(255, 0, 0);
+    color: black;
+}
+
+.off-white {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+footer {
+    border-top: 5px solid rgba(255, 0, 0, 0.8);
+    bottom: 0;
+    position: fixed;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-element {
+    width: 33.33%;
+    font-family: Raleway;
+}
+
+.flex-element h3 {
+    background-color: white;
+    color: black;
+    padding: 5px;
+    display: inline;
+}
+
+.flex-element p {
+    padding: 10px;
+    background-color: rgba(90, 90, 90, 0.7);
+    color: rgb(189, 189, 189);
+}
+
+.flex-element:nth-of-type(1) {
+    padding: 20px 0 10px 40px;
+    text-align: left;
+}
+
+.flex-element:nth-of-type(1) p,
+.flex-element:nth-of-type(3) p {
+    display: inline;
+    padding: 15px 5px 5px 5px;
+}
+
+.flex-element:nth-of-type(2) {
+    padding: 20px 0 10px 0;
+}
+
+.flex-element:nth-of-type(2) .h3-container {
+    text-align: center;
+}
+
+.flex-element:nth-of-type(3) {
+    padding: 20px 40px 10px 0;
+    text-align: right;
+}
+
+.flex-element:nth-of-type(1) .h3-container,
+.flex-element:nth-of-type(3) .h3-container {
+    margin-bottom: 20px;
+}
+
+@media screen and (max-height: 770px),
+screen and (max-width: 1600px) {
+    .mainTitle {
+        font-size: 40px;
+    }
+    .company {
+        font-size: 12px;
+    }
+    .right {
+        font-size: 15px;
+        margin: 0 15px 20px 0;
+    }
+    .right label {
+        padding: 4px;
+    }
+    /*MEDIA QUERY MENU BUTTON*********************************************/
+    .menuButton {
+        padding: 5px 10px;
+        height: 2em;
+    }
+    .menuButtonContainer:hover .menuButton {
+        height: 3.2em;
+    }
+    .menuButtonContainer {
+        font-size: 15px;
+    }
+    .menuButtonContainer:nth-of-type(1) {
+        /*Aplicado al primer botón*/
+        left: 10px;
+    }
+    .menuButtonContainer:nth-of-type(2) {
+        /*Aplicado al segundo botón*/
+        left: 90px;
+    }
+    /*********************************************MEDIA QUERY MENU BUTTON*/
+    .pageTitleContainer {
+        margin: 15px auto;
+    }
+    .pageTitle {
+        padding: 7px;
+        font-size: 25px;
+    }
+    fieldset input {
+        width: 200px;
+    }
+    fieldset {
+        margin: 0 auto 200px auto;
+        padding: 12px;
+        border-radius: 10px;
+    }
+    .fieldsetParagraph {
+        font-size: 12px;
+    }
+
+    legend {
+        font-size: 13px;
+    }
+
+    input {
+        height: 30px;
+        padding: 0 7px;
+    }
+
+    button {
+        /*Para que los botones de algunos formularios no estén tan pegados a las tablas un margin-bottom de 20px*/
+        margin-bottom: 15px;
+        padding: 3px 7px;
+    }
+
+    .advice {
+        padding: 6px;
+        font-size: 12px;
+    }
+
+    #register {
+        font-size: 12px;
+    }
+    h3 {
+        font-size: 15px;
+    }
+    .flex-element p {
+        font-size: 13px;
+    }
+    .container-links a {
+        width: 200px;
+        height: 200px;
+        padding-top: 75px;
+        font-size: 10px;
+    }
+    .container-links a:hover {
+        width: 250px;
+        height: 250px;
+        padding-top: 95px;
+        font-size: 15px;
+    }
+}
